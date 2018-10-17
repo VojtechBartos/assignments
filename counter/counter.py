@@ -8,4 +8,4 @@ def count_analyses(df):
     count = randint(0, 100)
     return "Number of possible analyses: {}".format(count)
 
-print(count_analyses(None))
+count_analyses(None)
