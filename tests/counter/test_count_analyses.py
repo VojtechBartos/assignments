@@ -1,6 +1,6 @@
 import pytest
 import pandas as pd
-from counter.counter import count_analyses
+from assignments.counter.counter import count_analyses
 
 
 df1 = [
