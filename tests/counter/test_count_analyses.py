@@ -11,15 +11,15 @@ df1 = [
 ]
 
 df2 = [
-    {'location': "SF", 'product': "iPhone", 'color': 'black', 'customer': 124, 'quantity': 10},
-    {'location': "LA", 'product': "iPhone", 'color': 'black', 'customer': 134, 'quantity': 11},
-    {'location': "SF", 'product': "iMac", 'color': 'grey', 'customer': 111, 'quantity': 12},
-    {'location': "LA", 'product': "iMac", 'color': 'white', 'customer': 145, 'quantity': 13}
+    {'location': "SF", 'product': "iPhone", 'color': 'black', 'quantity': 10},
+    {'location': "LA", 'product': "iPhone", 'color': 'black', 'quantity': 11},
+    {'location': "SF", 'product': "iMac", 'color': 'grey', 'quantity': 12},
+    {'location': "LA", 'product': "iMac", 'color': 'grey', 'quantity': 13}
 ]
 
 @pytest.mark.parametrize("data,expected", [
     (df1, 8),
-    (df2, 6)
+    (df2, 16)
 ])
 def test_count_analyses(data, expected):
     assert count_analyses(pd.DataFrame(data)) == expected
